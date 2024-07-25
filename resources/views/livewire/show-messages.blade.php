@@ -22,9 +22,9 @@
                     </div>
 
                     <!-- Message Form -->
-                    <form wire:submit.prevent="sendMessage" class="flex send-form">
+                    <form wire:submit.prevent="sendMessage" class="flex send-form" id="messageForm">
                         <input type="hidden" wire:model="user.id" value="{{ $user->id }}">
-                        <input type="text" wire:model="messageText" class="flex-grow border border-gray-300 dark:border-gray-600 rounded-lg p-2 mr-2" placeholder="Escreva sua mensagem..." required>
+                        <input type="text" wire:model="messageText" id="messageInput" class="flex-grow border border-gray-300 dark:border-gray-600 rounded-lg p-2 mr-2" placeholder="Escreva sua mensagem..." required>
                         <button type="submit" class="bg-blue-500 text-white rounded-lg px-4 py-2">
                             Enviar
                         </button>
@@ -34,12 +34,29 @@
         </div>
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('messageForm');
+            const input = document.getElementById('messageInput');
+
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // Emite o evento Livewire para enviar a mensagem
+                    // Livewire.dispatch('sendMessage'); 
+
+                    // Limpar o campo de mensagem
+                    if (input) {
+                        input.value = '';
+                    }
+                });
+            }
+        });
         document.addEventListener('DOMContentLoaded', function () {
             const userId = @json(Auth::id()); 
             if (userId) {
                 window.Echo.channel('new_message.' + userId)
                 .listen('NewMessage', (event) => {
-                    console.log("Nova mensagem recebida:", event.message);
                     Livewire.dispatch('busca_mensagens'); 
                 });
             }

@@ -19,7 +19,7 @@ class ShowMessages extends Component
     public $messages = [];
 
     // protected $listeners = ['echo:message,MessageSent' => 'busca_mensagens'];
-    protected $listeners = ["busca_mensagens"];
+    protected $listeners = ["busca_mensagens","sendMessage"];
 
     public function mount(User $user)
     {
@@ -56,7 +56,7 @@ class ShowMessages extends Component
                 'message' => $this->messageText,
             ]);
     
-            $this->messageText = '';
+            $this->reset('messageText');
 
             // Event::dispatch(new MessageSent());
             $updatedData = ['id' => $this->user->id, 'content' => 'New content'];
