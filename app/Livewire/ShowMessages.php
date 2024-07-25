@@ -54,8 +54,8 @@ class ShowMessages extends Component
                 'message' => $this->messageText,
             ]);
     
-            $this->messageText = ''; 
-    
+            $this->messageText = '';
+
             Event::dispatch(new MessageSent());
             
             $this->busca_mensagens();

@@ -12,7 +12,7 @@
                     <!-- Message List -->
                     <div class="overflow-auto flex-grow">
                         @foreach ($messages as $message)
-                            <div class="flex message {{ $message->user_id == Auth::id() ? 'justify-start' : 'justify-end' }}">
+                            <div class="flex message {{ $message->user_id == Auth::id() ? 'justify-start' : 'justify-start' }}">
                                 <div class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg my-2 {{ $message->user_id == Auth::id() ? 'you-message' : 'recipient-message' }}">
                                     {{ $message->message }}
                                     <br><span class="identifier">{{ $message->user_id == Auth::id() ? 'Você' : $message->sender }}</span>
