@@ -33,7 +33,18 @@
             </div>
         </div>
     </div>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userId = @json(Auth::id()); 
+            if (userId) {
+                window.Echo.channel('new_message.' + userId)
+                .listen('NewMessage', (event) => {
+                    console.log("Nova mensagem recebida:", event.message);
+                    Livewire.dispatch('busca_mensagens'); 
+                });
+            }
+        });
+    </script>
     <style>
     .send-form {
         padding-top: 10px;

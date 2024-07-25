@@ -35,4 +35,8 @@
         </div>
         @livewireScripts
     </body>
+    <script>
+        // Passar o ID do usuário para o JavaScript
+        window.userId = @json(Auth::id());
+    </script>
 </html>

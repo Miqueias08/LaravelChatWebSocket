@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Message;
 use Auth;
 use App\Events\MessageSent;
+use App\Events\NewMessage;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
 
@@ -17,7 +18,8 @@ class ShowMessages extends Component
     public $messageText='';
     public $messages = [];
 
-    protected $listeners = ['echo:message,MessageSent' => 'busca_mensagens'];
+    // protected $listeners = ['echo:message,MessageSent' => 'busca_mensagens'];
+    protected $listeners = ["busca_mensagens"];
 
     public function mount(User $user)
     {
@@ -56,7 +58,9 @@ class ShowMessages extends Component
     
             $this->messageText = '';
 
-            Event::dispatch(new MessageSent());
+            // Event::dispatch(new MessageSent());
+            $updatedData = ['id' => $this->user->id, 'content' => 'New content'];
+            Event::dispatch(new NewMessage($updatedData));
             
             $this->busca_mensagens();
         } catch (\Throwable $th) {
