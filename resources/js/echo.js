@@ -13,11 +13,9 @@ window.Echo = new Echo({
     enabledTransports: ['ws', 'wss'],
 });
 
-// const userId = window.userId;
-// console.log(userId);
-// window.Echo.channel('new_message.'+userId)
-//     .listen('NewMessage', (event) => {
-//         console.log("nova mensagem");
-//         Livewire.emit('busca_mensagens');
-//     }
-// );
+window.Echo.channel('new_message.'+userId)
+    .listen('NewMessage', (event) => {
+        console.log("nova mensagem");
+        Livewire.emit('busca_mensagens');
+    }
+);
