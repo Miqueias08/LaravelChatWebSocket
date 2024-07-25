@@ -1,0 +1,43 @@
+version: "3.8"
+services:
+  chat_app:
+    image: chatapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - npm_public
+  agro_nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    volumes:
+      - ./:/var/www
+      - ./docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - npm_public
+  agro_redis:
+    image: redis:latest
+    restart: always
+    ports:
+      - "6379:6379"
+    networks:
+      - npm_public
+  agro_soketi:
+    image: quay.io/soketi/soketi:latest-16-alpine
+    restart: always
+    ports:
+      - "6001:6001"
+      - "9601:9601"
+    environment:
+      - SOKETI_METRICS_ENABLED=1
+    networks:
+      - npm_public
+networks:
+  npm_public:
+    external: true
