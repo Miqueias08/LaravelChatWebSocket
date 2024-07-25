@@ -142,3 +142,171 @@ Fatal error: Composer detected issues in your platform: Your Composer dependenci
 
    ERROR  Command "horizon" is not defined.  
 
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+
+
+   RedisException 
+
+  Connection refused
+
+  at vendor/laravel/framework/src/Illuminate/Redis/Connectors/PhpRedisConnector.php:159
+    155▕         if (version_compare(phpversion('redis'), '5.3.0', '>=') && ! is_null($context = Arr::get($config, 'context'))) {
+    156▕             $parameters[] = $context;
+    157▕         }
+    158▕ 
+  ➜ 159▕         $client->{$persistent ? 'pconnect' : 'connect'}(...$parameters);
+    160▕     }
+    161▕ 
+    162▕     /**
+    163▕      * Create a new redis cluster instance.
+
+      [2m+25 vendor frames [22m
+
+  26  artisan:13
+      Illuminate\Foundation\Application::handleCommand(Object(Symfony\Component\Console\Input\ArgvInput))
+

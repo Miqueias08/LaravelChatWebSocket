@@ -21,7 +21,7 @@ services:
       - ./docker/nginx/:/etc/nginx/conf.d/
     networks:
       - npm_public
-  agro_redis:
+  chat_redis:
     image: redis:latest
     restart: always
     ports:

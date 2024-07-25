@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -35,6 +37,19 @@ return new class extends Migration
             $table->longText('payload');
             $table->integer('last_activity')->index();
         });
+
+        DB::table('users')->insert([
+            [
+                'name' => 'Miqueias',
+                'email' => 'miqueiasfernando@gmail.com',
+                'password' => Hash::make('12345678'), // Lembre-se de usar um hash para senhas
+            ],
+            [
+                'name' => 'Marcos',
+                'email' => 'marcos@gmail.com',
+                'password' => Hash::make('12345678'),
+            ],
+        ]);
     }
 
     /**
